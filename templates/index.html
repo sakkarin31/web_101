@@ -26,8 +26,21 @@
         }
 
         function calculatePasswordStrength(password) {
-            return score = password.length * 10;
-            
+            var score = password.length * 2;
+            if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                score += 10;
+            }
+            if (/[0-9]/.test(password)) {
+                score += 10;
+            }
+            if (/[A-Z]/.test(password)) {
+                score += 10;
+            }
+            if (/[a-z]/.test(password)) {
+                score += 10;
+            }
+
+            return score;
         }
 
     

@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
     <h1>Password Strength Checker</h1>
     <label for="password">Password:</label>
-    <input type="password" id="password" >
+    <input type="password" id="password" oninput="checkPasswordStrength()">
+    <p id="passwordStrength">Password strength: <span id="strengthText">Weak</span></p>
+
+    <script>
+        function checkPasswordStrength() {
+            var password = $('#password').val();
+            var score = calculatePasswordStrength(password);
+            var strengthText = 'Weak';
+            if (score >= 60) {
+                strengthText = 'Strong';
+            } else if (score >= 30) {
+                strengthText = 'Moderate';
+            }
+            $('#strengthText').text(strengthText);
+        }
+
+        function calculatePasswordStrength(password) {
+            return score = password.length * 10;
+            
+        }
+
+    
+    </script>
 </body>
 </html>

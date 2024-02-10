@@ -54,13 +54,13 @@
             var password = $('#password').val();
             var score = calculatePasswordStrength(password);
             var strengthText = 'Weak';
-            var strengthClass = 'Weak'; // เพิ่มตัวแปรสำหรับ class
+            var strengthClass = 'Weak'; 
             if (score >= 60) {
                 strengthText = 'Strong';
-                strengthClass = 'Strong'; // ปรับปรุงค่าตัวแปร
+                strengthClass = 'Strong'; 
             } else if (score >= 30) {
                 strengthText = 'Moderate';
-                strengthClass = 'Moderate'; // ปรับปรุงค่าตัวแปร
+                strengthClass = 'Moderate';
             }
             $('#strengthText').text(strengthText).removeClass('Weak Moderate Strong').addClass(strengthClass);
         }

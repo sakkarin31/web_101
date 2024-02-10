@@ -14,7 +14,7 @@
             color: #182400;
         }
         h1 {
-            color: #007bff;
+            color: #dd50a9;
         }
         label, p {
             font-size: 16px;
@@ -25,6 +25,21 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             width: 300px;
+        }
+        #passwordStrength {
+            margin-top: 10px;
+        }
+        #strengthText {
+            font-weight: bold;
+        }
+        .Weak {
+            color: #ff0000;
+        }
+        .Moderate {
+            color: #ffa500;
+        }
+        .Strong {
+            color: #68ff68;
         }
     </style>
 </head>
@@ -39,12 +54,15 @@
             var password = $('#password').val();
             var score = calculatePasswordStrength(password);
             var strengthText = 'Weak';
+            var strengthClass = 'Weak'; // เพิ่มตัวแปรสำหรับ class
             if (score >= 60) {
                 strengthText = 'Strong';
+                strengthClass = 'Strong'; // ปรับปรุงค่าตัวแปร
             } else if (score >= 30) {
                 strengthText = 'Moderate';
+                strengthClass = 'Moderate'; // ปรับปรุงค่าตัวแปร
             }
-            $('#strengthText').text(strengthText);
+            $('#strengthText').text(strengthText).removeClass('Weak Moderate Strong').addClass(strengthClass);
         }
 
         function calculatePasswordStrength(password) {

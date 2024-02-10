@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bef4ec;
+            margin: 0;
+            padding: 20px;
+            color: #182400;
+        }
+    
+    </style>
 </head>
 <body>
     <h1>Password Strength Checker</h1>
     <label for="password">Password:</label>
     <input type="password" id="password" oninput="checkPasswordStrength()">
     <p id="passwordStrength">Password strength: <span id="strengthText">Weak</span></p>
-
+    
     <script>
         function checkPasswordStrength() {
             var password = $('#password').val();

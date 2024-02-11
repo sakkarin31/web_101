@@ -7,23 +7,53 @@
     <style>
         body {
             font-family: 'Courier New', Courier, monospace; 
-            background-color: #fff; 
+            background-color: #d5d8e8; 
             margin: 0;
             padding: 20px;
             padding-top: 30px;
             color: #333;
             display: flex;
-            justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
         }
+        h1 {
+            color: #5fd4a2;
+            font-size: 48px;
+        }
+        p {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #ff0000;
+            font-size: 20px;
+            padding: 10px;
+            border: 2px solid #002f4e;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #e2a7eb;
+            color: #00502f;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Dashboard</h1>
+    <h1>Welcome let's me chack your password!!!!</h1>
     <p>
-        This is the dashboard page. Click the links below to:
+        You have a account?
     </p>
     <ul>
         <li><a href="{{ url_for('login') }}">Login</a></li>

@@ -6,32 +6,61 @@
     <title>Register</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
+            font-family: 'Courier New', Courier, monospace; 
+            background-color: #0a0a0a; 
             margin: 0;
             padding: 20px;
-            color: #333;
+            padding-top: 30px;
+            color: #00ff00;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
         h2 {
-            color: #428bca;
+            color: #ffffff;
+            font-size: 48px;
         }
         label, p {
-            font-size: 16px;
+            font-size: 32px;
+            text-align: center;
         }
         input[type="text"], input[type="password"] {
             margin-top: 5px;
             padding: 10px;
-            border: 1px solid #ddd;
             border-radius: 5px;
             width: 300px;
+            text-align: center;
+            background-color: #333;
+            color: #00ff00; 
+            border: 2px solid #ff5b5b; 
         }
         button {
+            margin-top: 10px;
             padding: 10px;
-            background-color: #428bca;
-            color: #feaeae;
             border: none;
             border-radius: 5px;
+            background-color: #007acc;
+            color: #fff;
             cursor: pointer;
+        }
+        button:hover {
+            background-color: #005e9c;
+        }
+        p {
+            margin-top: 10px;
+        }
+        a {
+            color: #73c7ff;
+            text-decoration: none;
+            animation: blink 250ms step-end infinite;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes blink {
+            50% { color: #ff7277; }
         }
     </style>
 </head>

@@ -17,6 +17,10 @@ with app.app_context():
     db.create_all()
 
 @app.route('/')
+def dashboard():
+    return render_template('dashboard.html')
+
+@app.route('/home')
 def home():
     return render_template('index.html')
 

@@ -5,6 +5,6 @@
 - pip install -r requirements.txt
 ```bash
 git clone https://github.com/sakkarin31/web_101.git
-pip install kivy
+pip install -r requirements.txt
 ```
 - รัน main.py

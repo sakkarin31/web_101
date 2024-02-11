@@ -12,7 +12,7 @@
             padding: 20px;
             color: #333;
         }
-        h1 {
+        h2 {
             color: #428bca;
         }
         label, p {
@@ -36,10 +36,7 @@
     </style>
 </head>
 <body>
-    <h1>Register</h1>
-    {% if error %}
-    <p style="color: red;">{{ error }}</p>
-    {% endif %}
+    <h2>Register</h2>
     <form method="post" action="{{ url_for('register') }}">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>

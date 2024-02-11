@@ -20,6 +20,7 @@
         }
         h1 {
             color: #dd50a9;
+            font-size: 64px;
         }
         label, p {
             font-size: 32px;
@@ -49,13 +50,38 @@
         .Strong {
             color: #68ff68;
         }
+        .tab-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+        .tab-bar a, .tab-bar button {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h1>Password Strength Checker</h1>
-    <label for="password">Password:</label>
-    <input type="password" id="password" oninput="checkPasswordStrength()">
-    <p id="passwordStrength">Password strength: <span id="strengthText">Weak</span></p>
+    <div class="tab-bar">
+        <a href="login">Log out</a>
+    </div>
+    <div style="margin-top: 60px;"> 
+        <h1>Password Strength Checker</h1>
+        <label for="password">Password:</label>
+        <input type="password" id="password" oninput="checkPasswordStrength()">
+        <p id="passwordStrength">Password strength: <span id="strengthText">Weak</span></p>
+    </div>
     
     <script>
         function checkPasswordStrength() {
@@ -90,8 +116,6 @@
 
             return score;
         }
-
-    
     </script>
 </body>
 </html>

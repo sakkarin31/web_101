@@ -11,6 +11,7 @@
             background-color: #0a0a0a; 
             margin: 0;
             padding: 20px;
+            padding-top: 30px;
             color: #00ff00;
             display: flex;
             justify-content: center;
@@ -25,6 +26,7 @@
         label, p {
             font-size: 32px;
             text-align: center;
+            animation: blink 3s step-end infinite;
         }
         input[type="password"] {
             margin-top: 5px;
@@ -35,13 +37,16 @@
             background-color: #333;
             color: #00ff00; 
             border: 2px solid #555; 
+            
         }
         #passwordStrength {
             display: block;
             text-align: center;
+            animation: blink 1s step-end infinite;
         }
         #strengthText {
             font-weight: bold;
+            animation: blink 0.33s step-end infinite;
         }
         .Weak {
             color: #ff0000;
@@ -64,7 +69,8 @@
             justify-content: space-around;
             box-sizing: border-box;
         }
-        .tab-bar a, .tab-bar button {
+        .tab-bar a{
+            font-family: 'Courier New', Courier, monospace; 
             color: white;
             text-decoration: none;
             padding: 5px 10px;
@@ -72,13 +78,17 @@
             border: none;
             cursor: pointer;
         }
+
+        @keyframes blink {
+            50% { color: #222; }
+        }
     </style>
 </head>
 <body>
     <div class="tab-bar">
         <a href="login">Log out</a>
     </div>
-    <div style="margin-top: 60px;"> 
+    <div style="margin-top: -250px;"> 
         <h1>Password Strength Checker</h1>
         <label for="password">Password:</label>
         <input type="password" id="password" oninput="checkPasswordStrength()">
